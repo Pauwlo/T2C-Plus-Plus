@@ -1,0 +1,12 @@
+<?php
+
+// Database
+$hostname = 'localhost';
+$user = 'root';
+$password = '';
+$database = 't2cpp';
+$tableNamePrefix = '';
+
+$dsn = "mysql:host=$hostname;dbname=$database;charset=utf8";
+
+$cookieExpirationTime = time() + 30*24*3600;

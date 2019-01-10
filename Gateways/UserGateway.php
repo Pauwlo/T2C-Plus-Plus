@@ -44,9 +44,11 @@ class UserGateway
         if (count($results) == 1)
         {
             $id = $results[0]['id'];
+            $showBtnAdd = boolval($results[0]['show_btn_add']);
+            $dayMode = boolval($results[0]['day_mode']);
 
             $this->updateByID($id);
-            return new User($id);
+            return new User($id, $showBtnAdd, $dayMode);
         }
 
         return new User;
